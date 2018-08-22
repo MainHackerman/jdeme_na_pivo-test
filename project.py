@@ -1,14 +1,14 @@
 pivo = 80
 
-#pocet_lidi = int(input())
-#rozpocet_osoba = int(input())
-#zastupce = input()
-#studeti = int(input())
+pocet_lidi = int(input())
+rozpocet_osoba = int(input())
+zastupce = input()
+studeti = int(input())
 
-pocet_lidi = 10
-rozpocet_osoba = 1000
-zastupce = 'Pepa'
-studeti = 5
+#pocet_lidi = 10
+#rozpocet_osoba = 1000
+#zastupce = 'Pepa'
+#studeti = 5
 
 
 rozpocet_vsichni = rozpocet_osoba * pocet_lidi
