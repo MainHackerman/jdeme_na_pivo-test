@@ -1,8 +1,13 @@
 import unittest
 import sys
-import os
-#import project_test_inserted as project
+import io
 
+oldstdin, sys.stdin = sys.stdin, io.StringIO('10\n100\nPepa\n5')
+
+try:
+  from project import pivo
+finally:
+  sys.stdin = oldstdin
 
 class TestStaticVariables(unittest.TestCase):
     def test_pivo(self):
@@ -10,11 +15,6 @@ class TestStaticVariables(unittest.TestCase):
         #self.assertEqual(pivo, 80)
 
 
-oldstdin = sys.stdin
 
-try:
-  from project import pivo
-finally:
-  sys.stdin = oldstdin
 
 print(pivo)
