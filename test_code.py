@@ -40,5 +40,20 @@ class TestComputedVariables(unittest.TestCase):
     def test_rozcpocet_studenti(self):
         self.assertEqual(project.rozpocet_studenti, project.stud_pivo * project.studeti)
 
+    def test_rozpocet_ostatni(self):
+        self.assertEqual(project.rozpocet_ostatni, project.rozpocet_vsichni - project.rozpocet_studenti)
+
+    def test_piva_studenti(self):
+        self.assertEqual(project.rozpocet_studenti, project.rozpocet_studenti // project.stud_pivo)
+
+    def test_piva_ostatni(self):
+        self.assertEqual(project.piva_ostatni, project.piva_ostatni // project.pivo)
+
+    def test_cena_studenti(self):
+        self.assertEqual(project.cena_studenti, project.piva_studenti * project.stud_pivo)
+
+    def test_cena_ostatni(self):
+        self.assertEqual(project.cena_ostatni, project.piva_ostatni * project.pivo)
+
 if __name__ == '__main__':
     unittest.main()
